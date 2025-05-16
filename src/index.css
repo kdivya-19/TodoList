@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hh1 {
+    background-color: linera-gradient(
+        to right,
+        rgb(5, 21, 126),
+        rgb(98, 6, 92)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+} */
