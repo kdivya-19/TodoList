@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import Navbar from './Components/Navbar'
 import EmptyState from './Components/EmptyState'
 import { Delete, DeleteIcon, Edit2Icon, Edit3Icon, LucideDelete, Trash, Trash2, Trash2Icon } from 'lucide-react'
@@ -79,7 +77,7 @@ function App() {
               </div>
             </div>
             <div className="flex justify-center items-center bg-gray-100 mb-2 ">
-              <div className='flex flex-col h-[65vh] w-[65%]  sm:h-[55vh] sm:w-[65%] mt-6 bg-white text-black '>
+              <div className='flex flex-col h-[65vh] w-[85%]  sm:h-[55vh] sm:w-[65%] mt-6 bg-white text-black '>
                 {!loading && todos.length===0 && (
                 <div className='flex mx-[15%] my-1 sm:mx-56 sm:my-2'>
                   <EmptyState />
@@ -94,14 +92,13 @@ function App() {
                                 type="text"
                                 value={editText}
                                 onChange={(e) => setEditText(e.target.value)}
-                                className="border border-blue-500 rounded px-2"
+                                className="border border-blue-500 rounded px-1 w-20 sm:w-fit"
                               />
                             ) : (
                               item.todo
                             )}
                           </div>
-                          <div className="flex gap-4 mx-auto mr-1">
-                            {/* <input type="checkbox" className="appearance-none w-6 h-6 border-2 border-blue-600 checked:bg-blue-600 checked:border-transparent font-bold" /> */}
+                          <div className="flex gap-2 sm:gap-4 mx-1 sm:mx-auto sm:mr-1">
                             <label className="relative inline-flex items-center cursor-pointer">
                               <input
                                 type="checkbox" checked={item.isCompleted} onChange={()=>handleToggleCompleted(index)}
@@ -123,7 +120,7 @@ function App() {
                             </label>
 
                               {editIndex === index ? (
-                                <button onClick={handleSaveEdit} className="text-green-600 font-semibold">Save</button>
+                                <button onClick={handleSaveEdit} className=" text-sm text-green-600 font-semibold">Save</button>
                               ) : (
                                 <button onClick={() => handleEdit(index)} className="text-blue-600">
                                   <Edit3Icon />

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kdivya-19.github.io/ToDo-List/",
+  "homepage": "https://kdivya-19.github.io/TodoList/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
